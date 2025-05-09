@@ -1,0 +1,32 @@
+/* PAGE STYLE */
+@import url('./menu.css');
+@import url('./highlights.css');
+@import url('./products.css');
+@import url('./sale-rep.css');
+@import url('./showcase.css');
+@import url('./place.css');
+@import url('./footer.css');
+@import url('./form-hook.css');
+@import url('./popup-form.css');
+@import url('./success-popup.css');
+
+* {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.descriptionH {
+    display: none;
+    z-index: -9999;
+}

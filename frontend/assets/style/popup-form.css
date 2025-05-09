@@ -1,0 +1,124 @@
+/* POPUP FORM */
+
+.popup-form {
+    position: fixed;
+    left: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -2px -2px 8px 0 rgba(0, 0, 0, 0.2), 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: bottom 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.popup-form-hidden {
+    bottom: -450px;
+    transform: translate(-50%, 0%);
+    display: flex;
+}
+.popup-form-visible {
+    bottom: 50%;
+    transform: translate(-50%, +50%);
+    display: flex;
+}
+
+.popup-form .header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #7b2976;
+    background: linear-gradient(to right, #952997, #602752);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.popup-form .header h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.popup-form .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+.popup-form .close:hover {
+    opacity: 0.7;
+}
+.popup-form .close img {
+    max-width: 15px;
+    max-height: 15px;
+}
+
+.popup-form .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.popup-form .content h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.popup-form .content h3 span {
+    color: #ba0000;
+}
+
+.popup-form .content .input {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.popup-form .content input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popup-form .content input:hover,
+.popup-form .content input:focus {
+    border-color: #7b2976;
+    outline: none;
+}
+
+.popup-form .content .input:last-child {
+    margin-bottom: 20px;
+}
+.popup-form .content button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #7b2976;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-form .content button:hover,
+.popup-form .content button:focus {
+    background-color: #9e3c98;
+    outline: none;
+}
