@@ -111,7 +111,6 @@ async function sendEmailToServer(data) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const result = await response.json();
-        console.log('Server response:', result);
 
         return result;
     } catch (error) {

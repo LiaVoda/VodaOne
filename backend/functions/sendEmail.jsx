@@ -57,7 +57,9 @@ async function sendEmail(body) {
             html: htmlContent,
         });
 
-        console.log("MailGun response:", data);
+        // Log result
+        const logResult = { status: data.status, phone: phone, zipcode: zipcode, date: currentDate, time: currentTime };
+        console.log("Email result:", logResult);
 
     } catch (error) {
         console.error('Error sending email:', error);
