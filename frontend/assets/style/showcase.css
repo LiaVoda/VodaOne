@@ -1,0 +1,197 @@
+/* Section Showcase */
+.showcase {
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.showcase .best-choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 5px;
+    background-color: #7b2976;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: -2px -2px 8px 0 rgba(0, 0, 0, 0.2), 2px 0px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.showcase .container,
+.showcase .best-choice-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.showcase .container {
+    border-radius: 5px;
+    box-shadow: -2px -2px 8px 0 rgba(0, 0, 0, 0.2), 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.best-choice-container {
+    border-width: 3px;
+    border-style: solid;
+    border-color:  #7b2976;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: -2px 0px 8px 0 rgba(0, 0, 0, 0.2), 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.best-choice h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.showcase .showcase-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+}
+
+.showcase .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.showcase .product h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+.showcase .product h3 span {
+    font-size: 1.3rem;
+}
+.showcase .product h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ba0000;
+}
+.showcase .product h5 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #666;
+}
+.showcase .product h5 span {
+    text-decoration: line-through;
+}
+
+.showcase .button-more,
+.showcase .button-place {
+    width: auto;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.showcase .button-more {
+    background-color: #ba0000;
+    border: none;
+}
+.showcase .button-more:hover {
+    background-color: #f91601;
+}
+.showcase .button-place {
+    background-color: #ffffff;
+    border: 2px solid #333;
+}
+.showcase .button-place:hover {
+    background-color: #e3e3e3;
+}
+
+.showcase .button-more h4,
+.showcase .button-place h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+.showcase .button-more h4 {
+    color: #ffffff;
+}
+.showcase .button-place h4 {
+    color: #333;
+}
+
+.showcase .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.showcase .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    min-height: 120px;
+    padding: 5px 20px 10px 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+.showcase .description img {
+    max-height: 22px;
+    margin-right: 5px;
+}
+.showcase .description h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ba0000;
+}
+.showcase .description h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+}
+.showcase .description h5 span {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.showcase .description h6 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #333;
+}
+.showcase .description h6 span {
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.showcase .showcase-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+    background-color: #f2f2f2;
+}
+.showcase .showcase-footer h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ba0000;
+}
+
+.showcase .showcase-footer h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .showcase .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

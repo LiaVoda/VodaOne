@@ -1,0 +1,105 @@
+/* SECTION CONTACT US */
+.sales-rep {
+    width: 100%;
+    padding: 10px;
+}
+
+.sales-rep .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 5px;
+    box-shadow: -2px -2px 8px 0 rgba(0, 0, 0, 0.2), 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sales-rep .headline {
+    width: 100%;
+    padding: 5px;
+    background-color: #7b2976;
+    background: linear-gradient(to right, #952997, #602752);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.sales-rep .headline h2 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.sales-rep .content {
+    width: 100%;
+    padding: 10px 20px 5px 20px;
+    background-color: #ffffff;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.sales-rep .content h2 {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sales-rep .content h3 {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.sales-rep .hook {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px 5px 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.sales-rep .hook h2 {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sales-rep .hook-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.sales-rep .hook .button {
+    width: 50%;
+    min-width: 150px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #7b2976;
+    background: linear-gradient(to right, #952997, #602752);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sales-rep .hook .button:hover {
+    background-color: #9e3c98;
+    background: linear-gradient(to right, #b036b3, #81326d);
+}
+
+.sales-rep .hook .button h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .sales-rep .hook-content {
+        width: 100%;
+    }
+}
