@@ -57,6 +57,8 @@ async function sendEmail(body) {
             html: htmlContent,
         });
 
+        console.log("MailGun response:", data);
+
     } catch (error) {
         console.error('Error sending email:', error);
     }
