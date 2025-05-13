@@ -2,7 +2,7 @@
 
 // Server (switch between local and production)
 // const server = 'http://localhost:5000';     // local
-const server = 'https://vodafone-backend-0w9q.onrender.com';  // production
+const server = 'https://voda-backend.vercel.app/';  // production 
 
 // Add event listeners
 const submitButtonForm = document.getElementById("submit-button-form");
