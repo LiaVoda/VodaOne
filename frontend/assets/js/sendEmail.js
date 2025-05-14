@@ -10,7 +10,7 @@ async function pingApi() {
     await fetch(server + '/api/submit', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: { ping: true }
+        body: JSON.stringify({ ping: true })
     });
 }
 

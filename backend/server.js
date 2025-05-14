@@ -55,19 +55,16 @@ app.get('/api/auth/token', (req, res) => {
 // Route to send email
 const sendEmail = require('./functions/sendEmail.jsx');
 app.post('/api/submit', async (req, res) => {
-    // Ping function
-    if (req && req.body && req.body.ping) {
-        console.log("Request: ", req.method);
-        console.log("Ping received");
-        return res.status(200).json({ message: "pong" });
-    }
     // Ignore other requests
     if (req.method !== 'POST') {
         return res.status(200).json({ message: 'ok' });
     }
+    // Ping function
+    if (req && req.body && req.body.ping) {
+        return res.status(200).json({ message: "pong" });
+    }
     // Validate request
     if (!req.body || !req.body.authToken || !req.body.zipcode || !req.body.phone) {
-        console.log("Request: ", req.method);
         return res.status(400).json({ error: 'Invalid request body' });
       }
     // Send email
