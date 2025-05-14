@@ -69,6 +69,9 @@ async function submitForm(event) {
     // Call server function to send email
     await sendEmailToServer({ authToken, zipcode, phone })
         .then(response => {
+            if (response.error) {
+                throw new Error(response.error);
+            }
             // Send data to GTM
             SendDataToGoogleTagManager('form_submitted', targetButton);
             // Toggle Contact Form
