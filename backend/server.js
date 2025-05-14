@@ -10,7 +10,8 @@ require('dotenv').config();
 const app = express();
 
 // Rate limiter
-const limiter = rateLimit({ windowMs: 60 * 1000, max: 6 }); // 6 request per minute
+app.set('trust proxy', 1);      // trust Vercel proxy
+const limiter = rateLimit({ windowMs: 60 * 1000, max: 20 }); // 20 requests per minute
 app.use(limiter);
 
 // CORS middleware
