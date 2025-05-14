@@ -17,7 +17,7 @@ app.use(limiter);
 // CORS middleware
 const corsOptions = { 
     methods: ['POST', 'GET'],
-    origin: 'https://vodaone.vercel.app',
+    origin: ['https://vodaone.vercel.app', 'http://localhost:3000', 'https://netvdf.pt', 'https://www.netvdf.pt'],
     allowedHeaders: ['Content-Type', 'Authorization'] 
 };
 app.use(cors(corsOptions));
