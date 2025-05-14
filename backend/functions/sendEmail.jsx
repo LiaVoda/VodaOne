@@ -19,8 +19,12 @@ async function sendEmail(body) {
 
     try {
         // Get current time and date of an specific GMT timezone
+        const fullDatetime = moment().tz('Europe/Lisbon').format('DD-MM HH:mm');
         const currentTime = moment().tz('Europe/Lisbon').format('HH:mm');
         const currentDate = moment().tz('Europe/Lisbon').format('DD-MMM');
+        // Deconstruct time and date
+        const day = fullDatetime.split(' ')[0] || currentDate;
+        const time = fullDatetime.split(' ')[1] || currentTime;
 
         // Subject
         const subject = `LEAD - ${phone} - ${zipcode} - netvdf.pt`;
@@ -41,7 +45,7 @@ async function sendEmail(body) {
                                 Código postal: <strong style="font-size: 1.5rem; font-weight: 700;">${zipcode}</strong>
                         </td></tr><tr>
                             <td style="padding: 5px; text-align: left; font-size: 1.2rem; font-weight: 400; color: #333;">
-                                Hora: <strong>${currentTime.split(' ')[1]}</strong>&nbsp;Dia <strong>${currentTime.split(' ')[0]}</strong>
+                                Hora: <strong>${time}</strong>&nbsp;Dia <strong>${day}</strong>
                         </td></tr>
                 </table></div>
         `;
