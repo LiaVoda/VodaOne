@@ -6,12 +6,12 @@ const server = 'https://voda-backend.vercel.app';  // production at Vercel
 
 // Ping API event listeners
 document.addEventListener("DOMContentLoaded", pingApi);
-function pingApi() {
-    const response = fetch( server +'/ping', {
-        method: 'GET'
+async function pingApi() {
+    await fetch(server + '/api/submit', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: { ping: true }
     });
-    console.log(response.message);
-    return;
 }
 
 // Add event listeners
@@ -117,12 +117,14 @@ async function sendEmailToServer(data) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
         });
-        if (!response.ok) {
+        if (response.status !== 200) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const result = await response.json();
-
+        // Get response
+        const result = response.json();
         return result;
+
+    // Catch error
     } catch (error) {
         console.error('Error sending email to server:', error);
         throw error;

@@ -54,10 +54,21 @@ app.get('/api/auth/token', (req, res) => {
 
 // Route to send email
 const sendEmail = require('./functions/sendEmail.jsx');
-app.post('/api/submit', (req, res) => {
+app.post('/api/submit', async (req, res) => {
+    // Ping function
+    if (req && req.body && req.body.ping) {
+        res.status(200);
+    }
+    // Validate request
     if (!req.body || !req.body.authToken || !req.body.zipcode || !req.body.phone) {
         return res.status(400).json({ error: 'Invalid request body' });
       }
-    sendEmail(req.body);
-    res.send(200);
+    // Send email
+    try {
+        const result = await sendEmail(req.body);
+        res.status(200);
+    // Catch errors
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
 });
