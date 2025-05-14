@@ -61,6 +61,10 @@ app.post('/api/submit', async (req, res) => {
         console.log("Ping received");
         return res.status(200).json({ message: "pong" });
     }
+    // Ignore other requests
+    if (req.method !== 'POST') {
+        return res.status(200).json({ message: 'ok' });
+    }
     // Validate request
     if (!req.body || !req.body.authToken || !req.body.zipcode || !req.body.phone) {
         console.log("Request: ", req.method);
