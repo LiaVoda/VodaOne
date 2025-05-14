@@ -4,6 +4,16 @@
 // const server = 'http://localhost:5000';     // local
 const server = 'https://voda-backend.vercel.app';  // production at Vercel
 
+// Ping API event listeners
+document.addEventListener("DOMContentLoaded", pingApi);
+function pingApi() {
+    const response = fetch( server +'/ping', {
+        method: 'GET'
+    });
+    console.log(response.message);
+    return;
+}
+
 // Add event listeners
 const submitButtonForm = document.getElementById("submit-button-form");
 submitButtonForm.addEventListener('click', submitForm);

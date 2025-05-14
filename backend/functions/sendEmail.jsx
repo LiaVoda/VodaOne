@@ -66,6 +66,11 @@ async function sendEmail(body) {
         const logResult = { status: data.status, phone: phone, zipcode: zipcode, date: currentDate, time: currentTime };
         console.log("Email result:", logResult);
 
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: 'Email sent successfully' }),
+        };
+
     } catch (error) {
         console.error('Error sending email:', error);
     }
