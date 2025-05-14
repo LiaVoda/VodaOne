@@ -84,7 +84,7 @@ async function submitForm(event) {
             showSuccessMessage();
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Server error');
             alert('Ocorreu um erro ao enviar o email. Tente novamente mais tarde.');
             cleanFormInputs();
         });
