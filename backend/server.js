@@ -57,7 +57,8 @@ const sendEmail = require('./functions/sendEmail.jsx');
 app.post('/api/submit', async (req, res) => {
     // Ping function
     if (req && req.body && req.body.ping) {
-        return res.status(200).json({ message: "Pong" });
+        console.log("Ping received");
+        return res.status(200).json({ message: "pong" });
     }
     // Validate request
     if (!req.body || !req.body.authToken || !req.body.zipcode || !req.body.phone) {
