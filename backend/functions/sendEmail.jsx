@@ -27,22 +27,23 @@ async function sendEmail(body) {
 
         // Create the HTML table
         const htmlContent = `
-        <div style="font-family: sans-serif; background: #ef1d26; margin: 30px 60px 30px 60px; padding: 20px; border-radius: 8px;">
-            <div style="display: flex; flex-direction: row; justify-content: flex-start; gap: 10px; align-items: center; max-height: 50px; padding-bottom: 20px;">
-                <img src="https://res.cloudinary.com/dxty1jkt7/image/upload/v1746715706/logo_w_jtcjvt.webp" alt="Vodafone Logo" />
-                <h2 style="color: #ffffff; text-align: left; font-size: 2.5rem; font-weight: 500;">Lead</h2>
-            </div>
-            <table style="background: #f2f2f2; width: 100%; border-collapse: collapse; border-radius: 5px;">
-                    <tr><td style="width: 50%; padding: 5px; text-align: left; font-size: 1.2rem; font-weight: 500; color: #333;">
-                            Telemóvel: <strong style="font-size: 1.5rem; font-weight: 700;">${phone}</strong></td>
-                        <td style="width: 50%; padding: 5px; text-align: left; font-size: 1.2rem; font-weight: 500; color: #333;">
-                            Código postal: <strong style="font-size: 1.5rem; font-weight: 700;">${zipcode}</strong>
-                    </td></tr><tr>
-                        <td style="padding: 5px; text-align: left; font-size: 1.2rem; font-weight: 400; color: #333;">
-                            Hora: <strong>${currentTime}</strong>&nbsp;Dia: <strong>${currentDate}</strong>
-                    </td></tr>
-            </table>
-        </div>
+            <div style="font-family: sans-serif; background: #ef1d26; margin: 30px 60px 30px 60px; padding: 20px; border-radius: 8px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="max-height: 50px;">
+                    <tr><td valign="middle" style="padding-bottom: 20px;">
+                        <img src="https://res.cloudinary.com/dxty1jkt7/image/upload/v1746715706/logo_w_jtcjvt.webp " alt="Vodafone Logo" style="display: block; height: auto; max-height: 50px; vertical-align: middle;" /></td>
+                    <td valign="middle" style="padding-bottom: 20px; padding-left: 10px;">
+                        <h2 style="color: #ffffff; font-size: 2.5rem; font-weight: 500; margin: 0;">Lead</h2></td>
+                </tr></table>
+                <table style="background: #f2f2f2; width: 100%; border-collapse: collapse; border-radius: 5px;">
+                        <tr><td style="width: 50%; padding: 5px; text-align: left; font-size: 1.2rem; font-weight: 500; color: #333;">
+                                Telemóvel: <strong style="font-size: 1.5rem; font-weight: 700;">${phone}</strong></td>
+                            <td style="width: 50%; padding: 5px; text-align: left; font-size: 1.2rem; font-weight: 500; color: #333;">
+                                Código postal: <strong style="font-size: 1.5rem; font-weight: 700;">${zipcode}</strong>
+                        </td></tr><tr>
+                            <td style="padding: 5px; text-align: left; font-size: 1.2rem; font-weight: 400; color: #333;">
+                                Hora: <strong>${currentTime.split(' ')[1]}</strong>&nbsp;Dia <strong>${currentTime.split(' ')[0]}</strong>
+                        </td></tr>
+                </table></div>
         `;
 
         const mailgun = new Mailgun(FormData);
